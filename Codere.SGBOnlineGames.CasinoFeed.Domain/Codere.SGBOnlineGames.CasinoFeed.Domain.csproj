@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="Entities\GameDto.cs" />
     <Compile Include="Entities\JackpotDto.cs" />
-    <Compile Include="Entities\LicenseOrder.cs" />
+    <Compile Include="Entities\LicenseOrderDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IServiceSlotsGames.cs" />
     <Compile Include="ViewModels\JackpotViewModel.cs" />

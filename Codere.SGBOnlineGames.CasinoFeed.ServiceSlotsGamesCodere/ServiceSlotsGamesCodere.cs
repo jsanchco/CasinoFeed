@@ -112,12 +112,18 @@
                 var itemsInListJackpotDto = listJackpotDto.Where(x => x.Name == item);
                 var jackpotViewModel = new JackpotViewModel
                 {
-                    Jackpot = itemsInListJackpotDto.First(),
+                    Jackpot = new JackpotDto
+                    {
+                        Name = item
+                    },
                     Games = new List<GameDto>()
                 };
 
                 foreach(var itemInListJackpotDto in itemsInListJackpotDto)
                 {
+                    if (listGameDto == null)
+                        continue;
+
                     var findInListGameDto = listGameDto.FirstOrDefault(x => x.GameId == itemInListJackpotDto.GameId);
                     if (findInListGameDto != null)
                         jackpotViewModel.Games.Add(findInListGameDto);
