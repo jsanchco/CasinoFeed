@@ -119,16 +119,17 @@
                     Games = new List<GameDto>()
                 };
 
-                foreach(var itemInListJackpotDto in itemsInListJackpotDto)
-                {
-                    if (listGameDto == null)
-                        continue;
+                result.Add(jackpotViewModel);
 
+                if (listGameDto == null)
+                    continue;
+
+                foreach (var itemInListJackpotDto in itemsInListJackpotDto)
+                {
                     var findInListGameDto = listGameDto.FirstOrDefault(x => x.GameId == itemInListJackpotDto.GameId);
                     if (findInListGameDto != null)
                         jackpotViewModel.Games.Add(findInListGameDto);
-                }
-                result.Add(jackpotViewModel);
+                }    
             }
 
             return result;
