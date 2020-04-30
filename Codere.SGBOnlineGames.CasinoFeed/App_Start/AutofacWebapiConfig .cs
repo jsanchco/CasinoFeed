@@ -4,6 +4,7 @@
 
     using System.Web.Http;
     using ServiceSlotsGamesCodere;
+    using ServiceJackpotCodere;
     using Codere.SGBOnlineGames.CasinoFeed.Domain.Services;
     using System.Reflection;
     using Autofac;
@@ -34,8 +35,12 @@
         {
             //Register your Web API controllers.  
             builder.RegisterType<ServiceSlotsGamesCodere>()
-                   .As<IServiceSlotsGames>()
-                   .SingleInstance();
+                    .As<IServiceSlotsGames>()
+                    .SingleInstance();
+
+            builder.RegisterType<ServiceJackpotCodere>()
+                    .As<IServiceJackpot>()
+                    .SingleInstance();
         }
     }
 }

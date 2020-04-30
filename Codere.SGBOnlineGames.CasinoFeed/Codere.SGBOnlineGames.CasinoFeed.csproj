@@ -139,6 +139,7 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\GamesController.cs" />
+    <Compile Include="Controllers\JackpotsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -170,6 +171,10 @@
     <ProjectReference Include="..\Codere.SGBOnlineGames.CasinoFeed.ServiceSlotsGamesCodere\Codere.SGBOnlineGames.CasinoFeed.ServiceSlotsGamesCodere.csproj">
       <Project>{eba94a8b-b261-4257-b51f-ce6f433bf499}</Project>
       <Name>Codere.SGBOnlineGames.CasinoFeed.ServiceSlotsGamesCodere</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Codere.SGBOnlineGames.ServiceGames.Service\Codere.SGBOnlineGames.CasinoFeed.ServiceJackpotCodere.csproj">
+      <Project>{33bb0c10-7c0b-4ee6-a43c-662650325c0e}</Project>
+      <Name>Codere.SGBOnlineGames.CasinoFeed.ServiceJackpotCodere</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
