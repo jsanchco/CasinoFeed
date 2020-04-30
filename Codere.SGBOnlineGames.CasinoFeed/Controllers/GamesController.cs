@@ -2,11 +2,8 @@
 {
     #region Using
 
-    using Codere.SGBOnlineGames.CasinoFeed.Domain.Entities;
     using Domain.Services;
-    using ServiceSlotsGamesCodere;
     using System;
-    using System.Collections.Generic;
     using System.Net.Http;
     using System.Threading.Tasks;
     using System.Web.Http;
@@ -18,9 +15,10 @@
     {
         private readonly IServiceSlotsGames _serviceSlotsGames;
 
-        public GamesController()
+        public GamesController(IServiceSlotsGames serviceSlotsGames)
         {
-            _serviceSlotsGames = new ServiceSlotsGamesCodere();
+            _serviceSlotsGames = serviceSlotsGames ??
+                throw new ArgumentNullException(nameof(serviceSlotsGames));
         }
 
         // GET: api/Events
